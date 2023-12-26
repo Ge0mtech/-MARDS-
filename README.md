@@ -1,8 +1,8 @@
 <p align="center"><img src="https://lookimg.com/images/2023/09/25/QY5RTR.png" alt="Logo de MARD" height="128"></p>
 
-<h1 align="center">Scripts d'Activation Microsoft et de Bureau à Distance (MARDS)</h1>
+<h1 align="center">Microsoft Activation and Remote Desktop Scripts (MARDS)</h1>
 
-<p align="center">Un activateur Windows et Office utilisant les méthodes d'activation HWID / Ohook / KMS38 / Online KMS, avec un accent sur le code open-source et moins de détections d'antivirus.</p>
+<p align="center">Un script d'activation Windows et Microsoft 365 utilisant les méthodes d'activation HWID / Ohook / KMS38 / Online KMS, avec un accent sur le code open-source et moins de détections d'antivirus.</p>
 <hr>
 
 ## Téléchargement / Comment l'utiliser ?
