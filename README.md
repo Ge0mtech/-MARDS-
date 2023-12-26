@@ -1,56 +1,46 @@
-<p align="center"><img src="https://lookimg.com/images/2023/09/25/QY5RTR.png" alt="MAS Logo" height="128"></p>
+<p align="center"><img src="https://lookimg.com/images/2023/09/25/QY5RTR.png" alt="Logo de MARD" height="128"></p>
 
-<h1 align="center">Microsoft  Activation  Scripts (MAS)</h1>
+<h1 align="center">Scripts d'Activation Microsoft et de Bureau à Distance (MARDS)</h1>
 
-<p align="center">A Windows and Office activator using HWID / Ohook / KMS38 / Online KMS activation methods, with a focus on open-source code and fewer antivirus detections.</p>
+<p align="center">Un activateur Windows et Office utilisant les méthodes d'activation HWID / Ohook / KMS38 / Online KMS, avec un accent sur le code open-source et moins de détections d'antivirus.</p>
 <hr>
 
-## Download / How to use it?
+## Téléchargement / Comment l'utiliser ?
 
-### Method 1 - PowerShell (Recommended)
+### Méthode 1 - PowerShell (Recommandé)
 
--   On Windows 8.1/10/11, right-click on the Windows start menu and select PowerShell or Terminal (Not CMD).
--   Copy-paste the below code and press enter\
-    `irm https://massgrave.dev/get | iex`
--   You will see the activation options, and follow onscreen instructions.
--   That's all.
+- Sur Windows 8.1/10/11, faites un clic droit sur le menu de démarrage de Windows et sélectionnez PowerShell ou Terminal (Pas CMD).
+- Copiez-collez le code ci-dessous et appuyez sur Entrée\
+  `irm https://massgrave.dev/get | iex`
+- Vous verrez les options d'activation, et suivez les instructions à l'écran.
+- C'est tout.
 
-### Method 2 - Traditional
+### Méthode 2 - Traditionnelle
 
--   Download the file from [GitHub](https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/heads/master.zip) or [Bitbucket](https://bitbucket.org/WindowsAddict/microsoft-activation-scripts/get/master.zip)
--   Right-click on the downloaded zip file and extract
--   In the extracted folder, find the folder named `All-In-One-Version`
--   Run the file named `MAS_AIO.cmd`
--   You will see the activation options, and follow onscreen instructions.
--   That's all.
+- Téléchargez le fichier depuis [GitHub](https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/heads/master.zip) ou [Bitbucket](https://bitbucket.org/WindowsAddict/microsoft-activation-scripts/get/master.zip)
+- Faites un clic droit sur le fichier zip téléchargé et extrayez-le
+- Dans le dossier extrait, trouvez le dossier nommé `All-In-One-Version`
+- Exécutez le fichier nommé `MAS_AIO.cmd`
+- Vous verrez les options d'activation, et suivez les instructions à l'écran.
+- C'est tout.
 
-To run the scripts in unattended mode, check [here](https://massgrave.dev/command_line_switches.html)
+Pour exécuter les scripts en mode non assisté, vérifiez [ici](https://massgrave.dev/command_line_switches.html)
 
-```
-Latest Version: 2.5
-Release date: 16-Nov-2023
-```
+## Utilisation du RDP avec un compte Microsoft
 
-### [Troubleshooting / Help](https://massgrave.dev/troubleshoot.html)
-### [Download Original Windows & Office](https://massgrave.dev/genuine-installation-media.html)
-### Homepage - https://massgrave.dev
-</br>
+Pour utiliser le Bureau à distance avec un compte Microsoft, vous devez exécuter une commande spécifique sur le PC qui héberge la session de bureau à distance (doit exécuter Windows Pro ou une version supérieure). Voici comment faire :
 
-[![1.1]][1]
-[![1.2]][2]
-[![1.3]][3]
-[![1.4]][4]
+1. Ouvrez la boîte de dialogue Exécuter (appuyez sur Win+R).
+2. Tapez la commande suivante, en remplaçant `username@example.com` par l'adresse e-mail de votre compte Microsoft que vous utilisez pour vous connecter à l'ordinateur :
 
-[1.1]: https://lookimg.com/images/2023/03/21/QTvjcD.png (Chat with us without signup)
-[1.2]: https://lookimg.com/images/2023/03/21/QTvLyd.png (Chat with us)
-[1.3]: https://lookimg.com/images/2023/10/29/QiBot9.png (Follow on 𝕏/Twitter)
-[1.4]: https://lookimg.com/images/2023/05/17/Q0iZ2U.png (Reddit)
+    ```
+    runas /u:MicrosoftAccount\username@example.com winver
+    ```
 
-[1]: https://discord.gg/gjJEfq7ux8
-[2]: https://t.me/Microsoft_Activation_Scripts
-[3]: https://twitter.com/massgravel
-[4]: https://www.reddit.com/r/MAS_Activator
+3. Tapez la commande exactement comme indiqué, en ne changeant que l'adresse e-mail qui vient après le symbole `\`.
+
+Cette commande exécute le programme "winver" sous les informations d'identification du compte utilisateur spécifié. Cela met en cache vos informations d'identification de compte Microsoft. Comme votre compte utilisateur local n'avait pas de mot de passe, il n'était pas éligible pour l'utilisation de RDP même s'il avait les permissions appropriées. Après avoir fourni le mot de passe et appuyé sur Entrée, vous saurez que cela a fonctionné si vous voyez la boîte de dialogue À propos de Windows s'ouvrir. Vous pouvez la fermer ainsi que la fenêtre du terminal - vous avez terminé.
 
 ---
 
-<p align="center">Made with Love ❤️</p>
+<p align="center">Remixé </p>
