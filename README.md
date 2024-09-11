@@ -12,7 +12,7 @@
 - Sur Windows 8.1/10/11, faites un clic droit sur le menu de démarrage de Windows et sélectionnez PowerShell ou Terminal (Pas CMD).
 - Copiez-collez le code ci-dessous et appuyez sur Entrée
   ```
-  irm https://massgrave.dev/get | iex
+  irm https://get.activated.win | iex
   ```
 - Vous verrez les options d'activation, et suivez les instructions à l'écran.
 - C'est tout.
