@@ -1,48 +1,44 @@
+# Microsoft Activation and Remote Desktop Scripts (MARDS)
+
 <p align="center"><img src="https://lookimg.com/images/2023/09/25/QY5RTR.png" alt="Logo de MARD" height="128"></p>
 
-<h1 align="center">Microsoft Activation and Remote Desktop Scripts (MARDS)</h1>
+**MARDS** est un fork en français du projet [Microsoft Activation Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts) original, avec une petite option supplémentaire. C'est un ensemble de scripts PowerShell permettant d'activer de manière simple et sécurisée vos installations Windows et Office 365. Il utilise des méthodes d'activation modernes comme HWID, Ohook, KMS38 et KMS en ligne, tout en mettant l'accent sur l'open-source et une détection antivirus réduite.
 
-<p align="center">Un script d'activation Windows et Microsoft 365 utilisant les méthodes d'activation HWID / Ohook / KMS38 / Online KMS, avec un accent sur le code open-source et moins de détections d'antivirus.</p>
-<hr>
+## Installation et utilisation
 
-## Téléchargement / Comment l'utiliser ?
+### Méthode 1 : Installation via PowerShell (recommandée)
 
-### Méthode 1 - PowerShell (Recommandé)
+1. Ouvrez PowerShell en faisant un clic droit sur le menu Démarrer de Windows et sélectionnez "PowerShell".
+2. Exécutez la commande suivante :
 
-- Sur Windows 8.1/10/11, faites un clic droit sur le menu de démarrage de Windows et sélectionnez PowerShell ou Terminal (Pas CMD).
-- Copiez-collez le code ci-dessous et appuyez sur Entrée
-  ```
-  irm https://get.activated.win | iex
-  ```
-- Vous verrez les options d'activation, et suivez les instructions à l'écran.
-- C'est tout.
+   ```powershell
+   irm https://get.activated.win | iex
+   ```
 
-### Méthode 2 - Traditionnelle
+3. Suivez les instructions à l'écran pour activer vos produits Microsoft.
 
-- Téléchargez le fichier depuis [GitHub](https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/heads/master.zip) ou [Bitbucket](https://bitbucket.org/WindowsAddict/microsoft-activation-scripts/get/master.zip)
-- Faites un clic droit sur le fichier zip téléchargé et extrayez-le
-- Dans le dossier extrait, trouvez le dossier nommé `All-In-One-Version`
-- Exécutez le fichier nommé `MAS_AIO.cmd`
-- Vous verrez les options d'activation, et suivez les instructions à l'écran.
-- C'est tout.
+### Méthode 2 : Installation manuelle
 
-Pour exécuter les scripts en mode non assisté, vérifiez [ici](https://massgrave.dev/command_line_switches.html)
+1. Téléchargez le script depuis [GitHub](https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/heads/master.zip) ou [Bitbucket](https://bitbucket.org/WindowsAddict/microsoft-activation-scripts/get/master.zip).
+2. Décompressez l'archive téléchargée.
+3. Ouvrez le dossier `All-In-One-Version` et exécutez le fichier `MAS_AIO.cmd`.
+4. Suivez les instructions à l'écran pour activer vos produits Microsoft.
 
-## Utilisation du RDP avec un compte Microsoft
+## Activation de la connexion Bureau à distance avec un compte Microsoft
 
-Pour utiliser le Bureau à distance avec un compte Microsoft, vous devez exécuter une commande spécifique sur le PC qui héberge la session de bureau à distance (doit exécuter Windows Pro ou une version supérieure). Voici comment faire :
+Pour utiliser le Bureau à distance avec un compte Microsoft, suivez ces étapes :
 
-1. Ouvrez la boîte de dialogue Exécuter (appuyez sur Win+R).
-2. Tapez la commande suivante, en remplaçant `username@example.com` par l'adresse e-mail de votre compte Microsoft que vous utilisez pour vous connecter à l'ordinateur :
+1. Ouvrez la boîte de dialogue "Exécuter" (Win+R).
+2. Entrez la commande suivante, en remplaçant `username@example.com` par l'adresse e-mail de votre compte Microsoft :
 
-    ```
-    runas /u:MicrosoftAccount\username@example.com winver
-    ```
+   ```
+   runas /u:MicrosoftAccount\username@example.com winver
+   ```
 
-3. Tapez la commande exactement comme indiqué, en ne changeant que l'adresse e-mail qui vient après le symbole `\`.
+3. Appuyez sur Entrée. La boîte de dialogue "À propos de Windows" devrait s'ouvrir, indiquant que la commande a réussi.
 
-Cette commande exécute le programme "winver" sous les informations d'identification du compte utilisateur spécifié. Cela met en cache vos informations d'identification de compte Microsoft. Comme votre compte utilisateur local n'avait pas de mot de passe, il n'était pas éligible pour l'utilisation de RDP même s'il avait les permissions appropriées. Après avoir fourni le mot de passe et appuyé sur Entrée, vous saurez que cela a fonctionné si vous voyez la boîte de dialogue À propos de Windows s'ouvrir. Vous pouvez la fermer ainsi que la fenêtre du terminal - vous avez terminé.
+Cette commande met en cache les informations d'identification de votre compte Microsoft, permettant ainsi l'utilisation du Bureau à distance avec ce compte.
 
----
+## Options en ligne de commande
 
-<p align="center">Remixé </p>
+Pour exécuter les scripts en mode non assisté, consultez la [documentation des commandes en ligne de commande](https://massgrave.dev/command_line_switches.html).
